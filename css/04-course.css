@@ -1,0 +1,96 @@
+/* 四，整体布局*/
+#course{
+    padding: 32px 0;
+}
+
+.course-box{
+    height: 634px;
+}
+
+.course-box .title-pic{
+    height: 36px;
+}
+
+.course-box .course{
+    height: 568px;
+    margin-top: 30px;
+}
+
+/* 4.1 标题和分类*/
+.course-box .title-pic img{
+    width: 162px;                   /* 将图片改小 */
+}
+
+.course-box .title-pic a{
+    margin: 0 12px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.course-box .title-pic a:hover{
+    color: #ec1500;
+}
+
+.course-box .title-pic .active{
+    border-bottom: 2px solid #E76060;
+    padding-bottom: 5px;
+    font-weight: 700;
+    color: #545c63;
+}
+
+
+/* 4.2 课程列表 开始*/
+.course-box .course ul{
+    display: none;              /* 先隐藏所有的课程，再将current类的一个ul显示出来*/
+    width: 1176px;              /* （270+24）*4=1176，为了能让四个课程都放到一行中。因为 版心只是1152*/
+    cursor: pointer;
+}
+
+.course-box .course ul.current{     /* ul.current是交集选择器，用于确定current类的那个ul*/
+    display: block;
+}
+
+.course-box .course li{
+    position: relative;         /* 子绝父相的定位，父*/
+    float: left;
+    width: 270px;
+    height: 272px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+    transition: .2s;                    /* 配合下面的transform，加上动画过渡效果*/
+}
+
+.course-box .course li img{
+    width: 270px;
+    border-radius: 8px 8px 0 0;
+}
+
+.course-box .course li:hover{
+    transform: translateY(-3px);            /* 空间位置的改变：向上移动*/
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.course-box .course .title{                 /* 下面这三个元素的样式，跟秒杀区域的一样，所以样式设置复制过来即可*/
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #545c63;
+}
+
+.course-box .course .difficulty{
+    position: absolute;        /* 子绝父相的定位，子*/
+    left: 10px;
+    bottom: 40px;
+    font-size: 12px;
+}
+.course-box .course .price{
+    font-size: 12px;
+    position: absolute;         /* 子绝父相的定位，子*/
+    left: 10px;
+    bottom: 15px;
+    color: #F01414;
+    font-weight: 700;
+}
+

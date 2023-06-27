@@ -1,0 +1,184 @@
+/*二，热门课程区域：整体布局 开始*/
+#banner{
+    padding: 32px 0;        /* 设置最外层的通栏div，内边距：上下均为32px */
+    transition: 1s;         /* CSS的transition，即动画过渡的效果 */
+}
+
+.banner-box{
+    height: 482px;            /* 只设置div的高即可，因为该div还有个w版心类，已提前设置好了宽度、居中样式 */  
+}
+
+.g-banner{
+    height: 382px;
+}
+
+.sys-class{
+    height: 100px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;         /* 只右下角、左下角是8px */
+    box-shadow: 0 6px 22px 6px rgba(0,0,0,0.2);    /* 盒子的阴影，x轴、y轴、阴影模糊程度、阴影的面积，阴影的颜色和透明度 */
+}
+
+.course-list{
+    width: 256px;
+    height: 382px;
+    border-radius: 8px 0 0 0;           /* 只左上角是8px */
+    background-color:#39364D;         /* 设置背景色，取色器*/
+    color: #fff;                      /* 所有无序列表中的元素，即字体颜色是白色 */
+}
+
+.swiper{
+    position: relative;                 /* 子绝父相，父 */
+    width: 896px;
+    height: 382px; 
+    border-radius: 0 8px 0 0;           /* 只右上角是8px */
+}
+/*整体布局 结束*/
+
+
+/*2.1 分类列表*/
+.course-list ul{
+    margin-top: 20px;
+}
+
+.course-list li{
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;       /* 将行高设置为于列表高度一致，就会让内部元素垂直居中 */
+    padding: 0 10px;
+}
+
+.course-list li:hover{          /* hover伪类：鼠标悬浮时，的样式 */
+    background-color: rgba(255,255,255,0.1);     /* 白色+0.1的透明 */
+}
+
+.course-list .title{
+    font-size: 14px;            /* 设置无序列表中，标题的字体大小 */
+}
+
+.course-list .sub-title{
+    font-size: 12px;            /* 设置无序列表中，副标题的字体大小 */
+}
+
+.course-list .iconfont{
+    float: right;               /* 三角箭头，右浮动 */
+}
+
+
+/* 2.2 轮播图*/
+.swiper a{
+    display: block;             /* 先a标签，设置为块元素 */
+    width: 896px;               /* 再将a标签的宽高，设置为div的同等宽高 */
+    height: 382px; 
+    background-image: url(../images/swiper/swiper-1.jpg);
+    background-size: 896px;     /* 背景图，只设置宽即可，因为另一边会等比例缩放 */
+    border-radius: 0 8px 0 0 ;  /* 给a标签变成的块元素，右上角，设置为圆角 */
+    transition: 1s;            /* transition的动画过渡效果 */
+}
+
+/*轮播图中的左右切换按钮：用的是子绝父相的思想*/
+.swiper .arrow{                 /* 左右箭头的通用样式 */
+    position:absolute;          /* 子绝父相，子 */
+    width: 50px;                /* 在上述子绝父相基础上，设置边偏移 */
+    height: 50px;
+
+    text-align: center;         /* 小字体图标，水平居中 */
+    line-height: 50px;          /* 小字体图标，垂直居中 */
+
+    border-radius: 50%;         /* 圆角，50%就会变成圆形 */
+    background-color: rgba(255,255,255,0.1);        /* 白色+0.1透明 */
+}
+
+.swiper .arrow:hover{
+    background-color: rgba(0,0,0,0.1);              /* 黑色+0.1透明 */
+}
+
+.arrow .iconfont{
+    font-size: 30px;        /* 因为小字体图标，可以字体加大 */
+    font-weight: 700;       /* 因为小字体图标，可以字体加粗 */
+}
+
+.arrow-l{
+    left: 20px;             /* 既然箭头共性样式，已设置了位置的子绝父相。所以，对于每个箭头，设置下边偏移即可 */
+    top: 160px;
+}
+
+.arrow-r{
+    right: 20px;
+    top: 160px;
+}
+
+/*轮播图中的切图圆点*/
+.circle-list{
+    position: absolute;     /* 子绝父相，子 */
+    right: 110px;           /* 在上述子绝父相基础上，设置边偏移 */
+    bottom: 30px;
+}
+
+.circle-list li{
+    cursor: pointer;
+    float: left;
+    width: 9px;
+    height: 9px;
+    margin-left: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.circle-list li.current{
+    width: 30px;
+    border-radius: 4.5px;
+}
+
+/* 2.3 下方体系课 */
+.show-box{
+    display: inline-block;   /* 让原本是div的块元素，变为行内块元素 */
+    width: 192px;
+    height: 45px;
+    margin-top: 27px;
+    margin-left: 15px;
+}
+
+.show-box .sys-icon{
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    margin-right: 8px;
+}
+
+.show-box h4{
+    font-size: 15px;
+}
+
+.show-box p{
+    font-size: 11px;
+}
+
+.show-box .title:hover h4{      /* title类的这个div，变成伪类，且设置下里面h4的颜色*/
+    color: #ec1505;
+}
+
+.sys-class .line{
+    display: inline-block;      /* 让原本是div的块元素，变为行内块元素 */
+    width: 2.5px;
+    height: 42px;
+    background-color: #e8e8e8;
+}
+
+.sys-class .more-btn{
+    display: inline-block;     /* 让原本是div的块元素，变为行内块元素 */
+    font-size: 15px;
+    margin-left: 17px;
+}
+
+.sys-class .more-btn .iconfont{
+    font-size: 12px;
+}
+
+.sys-icon{                  /* 状态1到状态2，状态2再回到状态1，都是有动画效果 */
+    transition: .3s;        /* CSS动画|过渡属性，用transition：有过渡时间，匀速的一样 */
+}
+
+.sys-icon:hover{
+    transform:translateY(-3px);   /* 只是空间位置的瞬变，2D移动，用transform */
+}

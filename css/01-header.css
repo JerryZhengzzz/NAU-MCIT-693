@@ -1,0 +1,65 @@
+/*一，最外层：的通栏div的样式*/
+#header{
+    min-width: 1300px;
+    height: 72px;                       /* 只设置导航栏宽度即可，因为长度是默认是100%，于浏览器同宽 */
+    border-bottom: 1px solid #ccc;    /* 下边框的线的粗细、线型、颜色 */
+}
+
+/*中间层的样式：头部内容居中设置，是为了里面的内容能够居中，所以类似于加个盒子*/
+.nav-box{
+    width: 1300px;
+    margin: 0 auto;                     /* 外边距：上下为0，左右为自动，即居中 */
+}
+
+
+
+/*最内层1：logo的样式*/
+.nav-box h1{
+    width: 126px;                       /* h1标题标签，默认的宽高是0.所以，这里必须指定下宽高数据，这样h1标签的背景图即logo图，才能显示出来 */
+    height: 72px;
+    background-image: url(../images/logo.png);  /* h1标题标签，自己的背景图设置为logo图 */
+    background-size: 126px 72px;        /* h1标题标签，自己的背景图设置宽高尺寸，必须与h1标题标签的宽高相同 */
+}
+
+.nav-box h1 a{
+    display: block;                /* 因为a标签是行内元素，将其设置为block变成块元素，只有块元素才能设置宽高。 */
+    width: 126px;                  /* 因为只有a标签设置了宽高，鼠标过来时，箭头才能变成手型，即允许点击跳转 */
+    height: 72px;
+    font-size: 0;                  /* h1标题标签，内的a标签的文字，大小设置为0，就看不到字体了 */
+}
+
+
+/*最内层2：搜索框*/
+.search{
+    padding: 16px 0;                /* 为了让搜索区域内的单行文本框、小字体图标垂直居中，只需要设置下外层div的内边距，将内部内容挤压到到垂直居中 */
+    height: 40px;                   /* 要保证div盒子高度为72px，所以72=16*2+？ */
+    line-height: 40px;              /* 设置行高，确保内部单行文本框的高度与search内容区高度一致 */
+    margin-left: 10px;
+}
+
+.search div{
+    background-color: #F3F5F6;      /* 搜索框，整个的底色设置为灰色 */
+}
+
+.search div input{
+    width: 300px;
+    height: 30px;
+    border: 0;                          /* 去掉单行文本框的边框线，设置其粗细为0即可 */
+    background-color: #F3F5F6;        /* 确保单行文本框的底色，与上面整个搜索框的底色一致 */
+    padding-left: 10px;
+}
+
+.search .iconfont{
+    margin-right: 10px;
+}
+
+
+/*最内层3：登陆/注册区*/
+.login-area{
+    height: 72px;                   /* 因为a标签是行内元素，所以设置高、行高一致，就能保证垂直居中 */
+    line-height: 72px;
+}
+
+.login-area a{
+    padding: 0 20px;                /* 让所有a标签的左右内边距都为20px，有个宽一点的间隔，好看 */
+}

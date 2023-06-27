@@ -1,0 +1,71 @@
+/* 六， 脚部联系区 整体布局*/
+.footer{
+    height: 150px;
+    background-color: #fff;
+}
+
+.container{
+    position: relative;
+}
+
+/* 6.1 脚部链接 */
+.foot-link{
+    width: 750px;
+    height: 30px;
+    /* background-color: blue; */
+    position: absolute;
+    top: 40px;
+    left:0;
+}
+
+.foot-link a{
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+
+/* 6.2 版权信息 */
+.foot-copyright{
+    width: 750px;
+    height: 20px;
+    /* background-color: green; */
+    font-size: 12px;
+    position: absolute;
+    top: 80px;
+    left:0;
+}
+
+
+/* 6.3 社交平台图标 */
+.foot-icon{
+    width: 280px;
+    height: 60px;
+    /* background-color: pink; */
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.foot-icon li{
+    list-style: none;
+    float: left;
+    width: 70px;
+    height: 60px;
+    /* background-color: red; */
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.footer .iconfont{
+    font-size: 30px;
+    color: #ccc;
+}
+
+.footer .iconfont:hover{
+    color:#333;
+}
+
+.foot-icon li p{
+    font-size: 12px;
+}

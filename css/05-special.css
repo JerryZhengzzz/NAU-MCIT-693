@@ -1,0 +1,85 @@
+/* 五，专栏书籍 整体布局*/
+#special{                  /*通栏的div不用设置高*/
+    padding: 30px 0;       /*通过外边的div的上下内边距，把里边div挤到垂直居中；且padding算进总的高度*/ 
+}
+
+.special-box{
+    height: 320px;       /*中间版心的div需要设置高*/
+}
+
+.special-box .title-pic{
+    height: 36px;
+}
+
+.special-box ul{
+    height: 213px;
+    margin-top: 20px;
+    width: 1176px;              /*(210+25)*5=1175*/
+    cursor: pointer;
+}
+
+/* 5.1 标题和全部*/
+.special-box .title-pic img{
+    width: 163px;
+}
+
+.special-box .title-pic a{
+    float: right;
+    font-weight: 700;
+}
+
+.special-box .title-pic .all-btn:hover{
+    color: #E76060;
+}
+
+/* 5.2 专栏列表*/
+.special-box .course li{        /*先改li的宽高，再去改图片的大小*/
+    position: relative;
+    float: left;
+    width: 210px;
+    margin-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #F9FCFF;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.special-box .course li:hover{
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+
+.special-box .course li img{
+    width: 147px;
+}
+
+.special-box .course li .title{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.special-box .course li .price{
+    position: absolute;
+    left: 20px;
+    font-size: 12px;
+    display: inline-block;
+    color: #F01414;
+    font-weight: 700;
+}
+
+.special-box .course li .try-read{
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+    display: inline-block;
+    padding: 3px;
+    background-color: #ECF1FD;
+    color: #819FFE;
+}
+
+

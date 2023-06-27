@@ -1,0 +1,33 @@
+/* 必写/常用样式 */
+
+/* 1.版心类 */
+.w {
+    width: 1152px;          /* 设置了宽度 */
+    margin: 0 auto;         /* 水平居中 */
+}
+/* 2.左右浮动 */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/*3.清除浮动*/
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom:1
+}
+/* 隐藏页面元素的样式 */
+.hide, .none {
+    display: none;
+}
+
+.bgfff {
+    background-color: #fff;      /* 基础样式base.css中，默认的页面背景色是灰色，但是有的地方是白色 */
+}

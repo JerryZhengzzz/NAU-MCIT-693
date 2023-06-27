@@ -1,0 +1,50 @@
+﻿/* 基础样式 */
+
+/* 1.清除元素默认的内外边距  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2.页面默认的背景色、字体大小（因为行高默认是1倍，这里改成1.5倍）、字体颜色 */
+body {
+    background-color: #F5F7FA;   /* 灰色 */
+    font: 16px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    color: #A6A6A6;
+}
+
+/* 3.超链接标签设置 */
+a {
+    color: #545C63;              /* 默认的超链接颜色 */
+    text-decoration: none;         /* 取消a标签的下划线 */
+}
+a:hover {
+    color: #07111b;             /* 鼠标悬浮在超链接时的颜色 */
+}
+
+/* 4.去掉无序列表前面的小圆点或有序列表前面的1234 */
+li {
+    list-style: none;
+}
+
+/* 5.让所有斜体 不倾斜 */
+em, i {
+    font-style: normal;         /* 如果后续页面真要斜体，就用span标签来设置 */
+}
+
+/* 6.图片没有边框   去掉图片底侧的空白缝隙 */
+img {
+    border: 0;                  /* 因为只有ie浏览器，会默认图片显示有边框*/
+    vertical-align: middle;        /* 图片于文字之间垂直的对齐方式：居中、靠上、还是靠下，比如昵称+头像 */
+}
+
+/* 7.让button 按钮 变成小手 */
+button {
+    cursor: pointer;          /* 鼠标悬浮在button上时，会变成小手 */
+}
+
+/* 8.取消button、input按钮的轮廓线，因为默认鼠标已进入输入框内，外框线就会变黑变粗，会影响到后续的样式  */
+button, input {
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    outline: none;       
+}

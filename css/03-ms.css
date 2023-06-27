@@ -1,0 +1,117 @@
+/* 三，秒杀：整体布局*/
+#ms{
+    padding: 20px 0;        /* 让里面的版心类，垂直方向上有个距离，以使其居中*/
+}
+.ms-box{
+    height: 342px;
+    /* background-color: yellow; */
+}
+
+
+.ms-box h3{
+    height: 82px;
+    /* background-color: green; */
+}
+
+.countdown-box{
+    height: 260px;
+    /* background-color: red; */
+}
+ 
+.ms-box .countdown{
+    height: 260px;
+    width: 185px;
+    background-color: #E94443;
+    text-align: center;   /* 时钟区，所有的元素，都是水平居中 */
+    color: #fff;        /* 时钟区，所有的字体颜色，都是白色 */
+}
+
+.ms-box .ms-list{
+    height: 260px;
+    width: 960px;       /* 这个div区域，960=240*4，刚好是4个盒子的宽度 */
+    cursor: pointer;
+}
+
+
+/* 3.1 限时拼团，标题 */
+.ms-box h3 img{
+    width: 180px;
+}
+
+
+/* 3.2 倒计时时钟 */
+.ms-box .countdown h4{
+    margin-top: 22px;
+    font-size: 22px;
+}
+
+.ms-box .countdown .iconfont{
+    margin-top: 19px;
+    font-size: 52px;
+    font-weight: 680;
+}
+
+.ms-box .countdown p{
+    margin-top: 20px;
+}
+
+.timer{
+    margin-top: 20px;
+}
+
+.timer div{                  /* 只用标签类型，来确定元素样式，很高效，因为确定的是一大类的元素。而class只是人为设置的一类 */
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #333;
+}
+
+/* 3.3 滚动课程 */
+.ms-list{
+    position: relative;  /* 子绝父相此案的定位方式，父*/
+    overflow: hidden;    /* 隐藏所有溢出的内容，即5-12隐藏 */
+}
+
+
+.ms-list ul{
+    position: absolute; /* 子绝父相此案的定位方式，子*/
+    left: 0;            /* 定时器，让这个值不断变小，从而实现持续向左移动*/
+    width: 2880px;      /* (234+6)*12=2880 */
+}
+
+
+.ms-box .ms-list li{
+    position: relative;    /* 子绝父相此案的定位方式，父*/
+    float: left;
+    width: 234px;
+    height: 260px;
+    margin-left: 6px;
+    background-color: #fff;
+}
+
+.ms-box .ms-list img{
+    width: 234px;
+}
+
+.ms-box .ms-list .title{
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #545c63;
+}
+
+.ms-box .ms-list .difficulty{
+    position: absolute;         /* 子绝父相此案的定位方式，子*/
+    left: 10px;                 /* 再设置边偏移，注意的偏移量是相对于父的 */
+    bottom: 40px;
+    font-size: 12px;
+}
+
+.ms-box .ms-list .price{        
+    font-size: 12px;
+    position: absolute;         /* 价格，原理同上 */
+    left: 10px;
+    bottom: 15px;
+    color: #F01414;
+    font-weight: 700;
+}

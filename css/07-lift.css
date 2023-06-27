@@ -1,0 +1,36 @@
+/* 七，左侧电梯目录 整体布局*/
+#lift ul{
+    position: fixed;
+    top: 300px;
+    left: 0;
+    width: 120px;
+    height: 208px;
+    background-color: #fff;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0,0.15);
+
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+#lift li{
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    border-bottom: 2px solid #f3f5f7;
+
+    box-sizing: border-box;
+
+    color: #6d7278;
+    font-size: 14px;
+}
+
+#lift li:hover{
+    color: red;
+}
+
+#lift li:last-child{
+    border-bottom: 0px;
+}
